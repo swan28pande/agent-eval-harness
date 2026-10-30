@@ -1,0 +1,16 @@
+[project]
+name = "agent-eval-harness"
+version = "0.1.0"
+description = "Evaluate multi-step agent trajectories for planning, memory, and tool use."
+requires-python = ">=3.10"
+dependencies = ["torch>=2.2", "ray>=2.9", "prometheus-client>=0.20"]
+
+[project.scripts]
+agent-eval = "agent_eval.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["agent_eval*"]
